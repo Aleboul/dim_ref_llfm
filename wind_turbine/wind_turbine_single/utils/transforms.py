@@ -44,7 +44,5 @@ def compute_tpdm(X, indices=None, q=0.1):
         return TPDM, r0, mask, w, r
     w = sample[mask] / r[mask, None]
     TPDM = (w.T @ w) / w.shape[0]
-    print(np.where(r == r0))
-    stop
     return TPDM, r0, mask, w, r
 

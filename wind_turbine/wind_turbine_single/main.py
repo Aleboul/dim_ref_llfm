@@ -27,9 +27,6 @@ X = preprocess_data(X_raw)  # original inverted data
 X_unique = np.unique(X, axis=0)
 
 Y = pareto_rank_transform_matrix(X)
-print(Y[651,:])
-print(Y[710,:])
-stop
 # compute TPDM and get full radii r
 TPDM, r0, mask, w, r_full = compute_tpdm(Y, q=Q)
 plot_matrix(TPDM, "TPDM Matrix")
